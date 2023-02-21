@@ -4,7 +4,9 @@
   <h1>----{{ double }}</h1>
   <h2 class="count">{{ count }}</h2>
   <h2>msg: {{ msg }}</h2>
-  <el-button type="primary" @click="handleIncrement">增加</el-button>
+  <el-button class="btn" type="primary" @click="handleIncrement"
+    >增加</el-button
+  >
 </template>
 
 <script lang="ts" setup>

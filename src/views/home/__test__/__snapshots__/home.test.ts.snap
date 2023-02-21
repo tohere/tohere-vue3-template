@@ -5,7 +5,9 @@ exports[`Home Test > button click 1`] = `
 <h1>----2</h1>
 <h2 class=\\"count\\">1</h2>
 <h2>msg: hello world</h2>
-<button>增加</button>"
+<button class=\\"el-button el-button--primary btn\\" aria-disabled=\\"false\\" type=\\"button\\">
+  <!--v-if--><span class=\\"\\">增加</span>
+</button>"
 `;
 
 exports[`Home Test > should render 1`] = `
@@ -13,5 +15,7 @@ exports[`Home Test > should render 1`] = `
 <h1>----0</h1>
 <h2 class=\\"count\\">0</h2>
 <h2>msg: hello world</h2>
-<button>增加</button>"
+<button class=\\"el-button el-button--primary btn\\" aria-disabled=\\"false\\" type=\\"button\\">
+  <!--v-if--><span class=\\"\\">增加</span>
+</button>"
 `;

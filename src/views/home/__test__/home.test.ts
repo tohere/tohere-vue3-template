@@ -2,8 +2,6 @@ import { mount, VueWrapper } from "@vue/test-utils";
 import { createPinia, setActivePinia } from "pinia";
 import { describe, it, expect } from "vitest";
 import Home from "../index.vue";
-import ElementPlus from "element-plus";
-import "element-plus/dist/index.css";
 
 describe("Home Test", () => {
   let wrapper: VueWrapper;
@@ -15,9 +13,6 @@ describe("Home Test", () => {
 
     wrapper = mount(Home, {
       props,
-      global: {
-        plugins: [ElementPlus],
-      },
     });
   });
   it("should render", () => {
@@ -26,7 +21,7 @@ describe("Home Test", () => {
   });
   it("button click", async () => {
     const count = wrapper.find(".count");
-    const btn = wrapper.find("button");
+    const btn = wrapper.find(".btn");
     expect(count.text()).toBe("0");
     await btn.trigger("click");
     expect(count.text()).toBe("1");

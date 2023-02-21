@@ -21,5 +21,8 @@ export default defineConfig({
     globals: true,
     environment: "jsdom",
     includeSource: ["src/**/*.{js,ts}"],
+    deps: {
+      inline: ["element-plus"],
+    },
   },
 });
