@@ -2,6 +2,8 @@ import { mount, VueWrapper } from "@vue/test-utils";
 import { createPinia, setActivePinia } from "pinia";
 import { describe, it, expect } from "vitest";
 import Home from "../index.vue";
+import ElementPlus from "element-plus";
+import "element-plus/dist/index.css";
 
 describe("Home Test", () => {
   let wrapper: VueWrapper;
@@ -13,6 +15,9 @@ describe("Home Test", () => {
 
     wrapper = mount(Home, {
       props,
+      global: {
+        plugins: [ElementPlus],
+      },
     });
   });
   it("should render", () => {
